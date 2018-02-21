@@ -21,7 +21,7 @@ function register_post_types ()
       'public' => true,
       'has_archive' => false,
       'supports' => array('title', 'thumbnail'),
-      ' register_meta_box_cb' => 'distributor_register_meta_box',
+      'register_meta_box_cb' => 'distributor_register_meta_box',
     )
   );
 }
