@@ -20,7 +20,19 @@ function register_post_types ()
       ),
       'public' => true,
       'has_archive' => false,
+      'supports' => array('title', 'thumbnail'),
+      ' register_meta_box_cb' => 'distributor_register_meta_box',
     )
   );
 }
 add_action('init', 'register_post_types');
+
+function distributor_register_meta_box ($post)
+{
+	add_meta_box('link-meta-box', __('Lien externe'), 'distributor_link_meta_box', 'distributor');
+}
+
+function distributor_link_meta_box ()
+{
+	echo 'link here';
+}
